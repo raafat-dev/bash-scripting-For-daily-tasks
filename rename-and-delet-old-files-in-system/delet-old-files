@@ -1,0 +1,9 @@
+#!/bin/bash
+#Author : mohamed raafat
+#Date : 10/7/2020
+
+find /home/mohamed/dir2 -mtime +90 -exec mv {} {}.old \; #rename old files
+ 
+find /home/mohamed/dir2 -mtime +90 -exec rm {} \;
+
+#end 

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+#Author :mohamed raafat
+#date:10/7/2020
+
+
+hosts="/root/dir/check-connectivity/myhosts"
+
+for ip in $(cat $hosts)
+ 
+do
+      ping -c1 $ip &> /dev/null
+      if [ $? -eq 0 ]
+      then
+      echo $ip is ok
+      else
+      echo $ip is not ok
+      fi
+done  
+
+

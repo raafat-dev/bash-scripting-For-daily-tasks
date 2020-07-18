@@ -1,0 +1,23 @@
+#!/bin/bash
+
+#Author: moahmed raafat
+#Date: 11/7/2020
+#Description: backup system from /etc and /var 
+
+
+
+tar cvf /tmp/backup.tar /etc /var 
+
+gzip /tmp/backup.tar
+
+find /tmp/backup.tar.gz -mtime -1 -type f -print &> /dev/null
+
+if [ $? -eq 0 ]
+ then 
+ echo backup created
+ #scp /tmp/backup.tar.gz 192.168.1.3:/root/dir4
+ else 
+
+ echo backup faild
+
+fi

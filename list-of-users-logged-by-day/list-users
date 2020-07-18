@@ -1,0 +1,14 @@
+#!/bin/bash
+
+#Author : mohamed raafat
+#date: 12/7/2020
+
+
+
+today=`date | awk '{print $1,$2,$3}'`
+
+
+echo $today
+
+
+last | grep "$today"

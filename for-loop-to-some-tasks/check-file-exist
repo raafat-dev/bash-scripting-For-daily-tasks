@@ -1,0 +1,37 @@
+#!/bin/bash
+
+
+# author :mohamed raafat
+#date:11/7/2020
+
+
+FILES="/etc/passwd
+
+
+/etc/group
+
+
+/etc/shadow
+
+
+/etc/anything"
+
+echo
+
+
+for file in $FILES
+
+
+do
+
+
+	if [ ! -e "$file" ]        #check file if not exist
+	then
+
+
+	echo $file = does not exist
+	echo
+	fi
+
+
+done

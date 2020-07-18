@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Author : mohamed raafat
+#date:11/7/2020
+
+
+
+for filename in *.jpg
+
+
+do
+	
+
+mv $filename ${filename%.jpg}.png
+
+
+done

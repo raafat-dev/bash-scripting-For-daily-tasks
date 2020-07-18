@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#Author: mohamed raafat
+#date : 12/7/2020
+
+
+for i in /home/*
+do
+   check=$(grep -c "$i" /etc/passwd) 
+   if [ $check -ge 1 ]
+   then
+    echo $i file assign to user
+   else 
+    echo $i file not assign to user
+    
+   fi
+done  
